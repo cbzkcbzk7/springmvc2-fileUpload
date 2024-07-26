@@ -1,13 +1,15 @@
-package hello.upload.domain;
+package hello.upload.controller;
 
+import hello.upload.domain.UploadFile;
 import lombok.Data;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
 /**
- * packageName    : hello.upload.domain
- * fileName       : Item
+ * packageName    : hello.upload.controller
+ * fileName       : ItemForm
  * author         : Sora
  * date           : 2024-07-26
  * description    :
@@ -17,11 +19,10 @@ import java.util.List;
  * 2024-07-26        Sora       최초 생성
  */
 @Data
-public class Item {
+public class ItemForm {
 
-    private Long id;
+    private Long itemId;
     private String itemName;
-    private UploadFile attachFile;
-    private List<UploadFile> imageFiles;
-
+    private MultipartFile attachFile;
+    private List<MultipartFile> imageFiles;
 }
